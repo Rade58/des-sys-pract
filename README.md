@@ -10,10 +10,10 @@ npm create storybook@latest
 
 - styling with [tailwind](https://tailwindcss.com/docs/installation/using-vite)
 
-# Additinal dependencies beside ones given by bootstraper
-
+# Additinal addons
+<!-- 
 ```
 npm i -D @storybook/addon-themes @storybook/addon-links
 ```
 
-you must specify them in: `.storybook/main.ts`
+you must specify them in: `.storybook/main.ts` -->

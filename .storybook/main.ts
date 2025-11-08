@@ -5,12 +5,12 @@ const config: StorybookConfig = {
   addons: [
     "@chromatic-com/storybook",
     "@storybook/addon-docs",
-    "@storybook/addon-onboarding",
+    // "@storybook/addon-onboarding",
     "@storybook/addon-a11y",
     "@storybook/addon-vitest",
     // added by me
-    "@storybook/addon-themes",
-    "@storybook/addon-links",
+    // "@storybook/addon-themes",
+    // "@storybook/addon-links",
   ],
   framework: {
     name: "@storybook/react-vite",

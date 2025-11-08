@@ -1,3 +1,5 @@
+import { Button } from "./components/button/Button";
+
 function App() {
   return (
     <>
@@ -5,6 +7,7 @@ function App() {
         Practicing Design Systems
       </h1>
       <p className="text-base">Šta se radi u ovoj dolini?</p>
+      <Button label="Press" />
     </>
   );
 }
