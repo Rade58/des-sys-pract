@@ -8,17 +8,17 @@ export type SillyButtonProps = ComponentProps<"button"> & {
   variant?: "primary" | "secondary" | "destructive";
 };
 
-export function SillyButton(props: SillyButtonProps) {
+export function SillyButton({ variant, ...props }: SillyButtonProps) {
   let className: string = styles.button;
 
-  switch (props.variant) {
+  switch (variant) {
     case "primary":
       break;
     case "secondary":
-      className = className += ` ${styles.secondary}`;
+      className += ` ${styles.secondary}`;
       break;
     case "destructive":
-      className = className += ` ${styles.destructive}`;
+      className += ` ${styles.destructive}`;
       break;
     default:
       break;
