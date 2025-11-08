@@ -1,4 +1,4 @@
-# Practicing using Storybook for my design system
+# Design Systems with Storybook - tryout
 
 - [Storybook](https://storybook.js.org/docs/get-started/frameworks/react-vite?renderer=react) instatiated in existing [vite](https://vite.dev/guide/) react app
 
@@ -10,7 +10,7 @@ npm create storybook@latest
 
 - styling with [tailwind](https://tailwindcss.com/docs/installation/using-vite)
 
-# Additinal addons
+# Additional addons
 <!-- 
 ```
 npm i -D @storybook/addon-themes @storybook/addon-links
