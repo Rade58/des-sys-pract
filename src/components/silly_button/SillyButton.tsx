@@ -6,9 +6,17 @@ import styles from "./Sillybutton.module.css";
 
 export type SillyButtonProps = ComponentProps<"button"> & {
   variant?: "primary" | "secondary" | "destructive";
+  className?: string;
+  size?: "small" | "medium" | "large";
 };
 
-export function SillyButton({ variant, ...props }: SillyButtonProps) {
+export function SillyButton({
+  variant = "primary",
+  size = "medium",
+  className: additionalClassName,
+  // disabled,
+  ...props
+}: SillyButtonProps) {
   // without clsx library
   /*
   
@@ -50,14 +58,33 @@ export function SillyButton({ variant, ...props }: SillyButtonProps) {
       // className={clsx(styles.button, styles[variant])}
 
       // favorite way
+      // this way we are allowing className prop to override styles
+      // if user of the component wants to do that
 
-      className={clsx(styles.button, {
-        [styles.primary]: false, // added this jus to show you that
-        // in terms of our css file we don't have .primary class
-        // .button is our primary button style
-        [styles.secondary]: variant === "secondary",
-        [styles.destructive]: variant === "destructive",
-      })}
+      className={clsx(
+        styles.button,
+        {
+          [styles.primary]: false, // added this jus to show you that
+          // in terms of our css file we don't have .primary class
+          // .button is our primary button style
+          [styles.secondary]: variant === "secondary",
+          [styles.destructive]: variant === "destructive",
+          //
+          // I like this more but
+          // [styles.medium]: size === "medium",
+          // [styles.small]: size === "small",
+          // [styles.large]: size === "large",
+          // but let's do these like this: styles[size]
+        },
+        styles[size],
+        // this can be used but it is bad idea
+        // because sombody could add a class and mess things up
+        // allow this maybe mostly on low level like it is here
+        // and by low level I think of component
+        // built from one elemnt just like this
+        // button is
+        additionalClassName,
+      )}
     />
   );
 }
