@@ -29,9 +29,9 @@ const meta: Meta = {
       control: "select",
     },
     //
-    size: {
+    /* size: {
       control: "radio",
-    },
+    }, */
   },
 } satisfies Meta<typeof SillyButton>;
 
