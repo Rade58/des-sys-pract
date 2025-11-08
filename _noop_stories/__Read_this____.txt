@@ -1,0 +1,5 @@
+This folder came with the setup as /src/stories/
+
+Since I want to start fresh without existing stories
+I renamed this folder called `src/stories` to /_noop_stories
+but I left it inside repo as a reference
