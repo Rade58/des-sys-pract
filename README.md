@@ -48,3 +48,12 @@ You also need to set up decorators in `.storybook/preview.ts` with `withThemeByC
 just add this to css instead of class setup `@custom-variant dark(&:where [data-theme="dark"], [data-theme="dark"] *)`
 
 and inside `.storybook/preview.ts` use `withThemeByDataAttribute`
+
+## Tools for generating tints for figma
+
+[Color, Tint & Shade Generator](https://www.figma.com/community/plugin/1143464892862229742/color-tint-shade-generator)
+
+[tints and shades](https://www.figma.com/community/plugin/943569346291474506/tints-and-shades)
+
+- Then all colors should be added to css variables with naming that would be apropriate for generating css custom properties with tools like this one: [variables2css](https://www.figma.com/community/plugin/1261234393153346915/variables2css)
+

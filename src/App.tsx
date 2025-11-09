@@ -12,6 +12,12 @@ function App() {
           Press
         </Button>
       </div>
+
+      <div className="p-6">
+        <p className="bg-primary-600 text-secondary-400 p-8">
+          This is some themed paragraph
+        </p>
+      </div>
     </>
   );
 }
