@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* @theme {
 
 } */
 
-/* body {
+body {
+  /* @apply bg-white text-black; */
   @apply dark:bg-slate-950 dark:text-white;
-} */
+}
 
 /* @media (prefers-color-scheme: dark) {
   :root {
