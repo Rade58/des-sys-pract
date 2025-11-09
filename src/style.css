@@ -1,7 +1,17 @@
 @import "tailwindcss";
 
+/* ------ dark mode with class ------ */
+/* @custom-variant dark (&:where(.dark, .dark *)); */
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* ------ dark mode with data- attribute ------- */
+
+/* but we are not using data-theme like here
+which people do in most of the cases */
+/* @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *)); */
+/* we are using data-mode instead */
+@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
+/* ----------------------------------------------------- */
 
 /* @theme {
 

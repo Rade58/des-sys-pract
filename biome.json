@@ -11,8 +11,7 @@
 			"**",
 			"!node_modules",
 			"!dist",
-			"!build",
-			"!**/*.css"
+			"!build"
 		]
 	},
 	"formatter": {
@@ -43,6 +42,11 @@
 			"source": {
 				"organizeImports": "on"
 			}
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
 		}
 	}
 }

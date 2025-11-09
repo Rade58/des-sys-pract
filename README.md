@@ -29,9 +29,22 @@ import "../src/style.css";
 
 I am using tailwind V4, so we do not need postcss, and [Autoprefixing](https://www.npmjs.com/package/autoprefixer) is built-in automatically
 
-## Dark theme
+we set up everything in `src/style.css`
 
-using classes, this way: `@custom-variant dark(&:where .dark, .dark *)`
+## Dark mode
+
+Tried both using classes and using data attribute, so we opted out media queries for prefered color scheme
+
+- **using `class`**:
+
+in css specify this: `@custom-variant dark(&:where .dark, .dark *)`
 
 <https://tailwindcss.com/docs/dark-mode>
 
+You also need to set up decorators in `.storybook/preview.ts` with `withThemeByClassName` and specify _@storybook/addon-themes_ inside `.storybook/main.ts`
+
+- **using `data-` attribute**:
+
+just add this to css instead of class setup `@custom-variant dark(&:where [data-theme="dark"], [data-theme="dark"] *)`
+
+and inside `.storybook/preview.ts` use `withThemeByDataAttribute`
