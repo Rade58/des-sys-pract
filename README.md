@@ -26,3 +26,8 @@ import "../src/style.css";
 ```
 
   -->
+
+# Styling
+
+I am using tailwind V4, so we do not need postcss, and [Autoprefixing](https://www.npmjs.com/package/autoprefixer) is built-in automatically
+
