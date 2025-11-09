@@ -80,3 +80,28 @@ export const Large: Story = {
     size: "large",
   },
 };
+
+//
+
+export const Dark: Story = {
+  // this is overriding query params
+  // and in this case it will be theme
+  // dark theme qill be applied for this story
+  parameters: {
+    themes: {
+      // so we are forcing dark mode
+      themeOverride: "dark",
+    },
+  },
+};
+
+// here we are overriding  viewport
+// but I don't think this reflects any query params
+// to force mobile viewport
+// see this: https://storybook.js.org/docs/essentials/viewport#defining-the-viewport-for-a-story
+export const Mobile: Story = {
+  globals: {
+    // 👇 Override viewport for this story
+    viewport: { value: "mobile1", isRotated: false },
+  },
+};

@@ -84,6 +84,8 @@ export function SillyButton({
         // built from one elemnt just like this
         // button is
         additionalClassName,
+        // we can add more classes here if we want
+        // "hover:underline decoration-2 decoration-emerald-800",
       )}
     />
   );

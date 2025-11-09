@@ -1,4 +1,4 @@
-import { Button } from "./components/silly_button/SillyButton";
+import { SillyButton as Button } from "./components/silly_button/SillyButton";
 
 function App() {
   return (
@@ -7,7 +7,11 @@ function App() {
         Practicing Design Systems
       </h1>
       <p className="text-base">Šta se radi u ovoj dolini?</p>
-      <Button label="Press" />
+      <div className="p-6">
+        <Button variant="primary" size="medium">
+          Press
+        </Button>
+      </div>
     </>
   );
 }
