@@ -49,11 +49,32 @@ just add this to css instead of class setup `@custom-variant dark(&:where [data-
 
 and inside `.storybook/preview.ts` use `withThemeByDataAttribute`
 
+## Color and variable plugin for figma
+
+[Tailwind CSS Color Generator](https://www.figma.com/community/plugin/1559145837943070163)
+
+But it is better to make variables by yourself (also in figma variables can use other variables values which is great for taiwind components styles)
+
 ## Tools for generating tints for figma
 
 [Color, Tint & Shade Generator](https://www.figma.com/community/plugin/1143464892862229742/color-tint-shade-generator)
 
 [tints and shades](https://www.figma.com/community/plugin/943569346291474506/tints-and-shades)
 
-- Then all colors should be added to css variables with naming that would be apropriate for generating css custom properties with tools like this one: [variables2css](https://www.figma.com/community/plugin/1261234393153346915/variables2css)
+
+## Variables exporters or css custom properies generators
+
+Then all colors should be added to css variables with naming that would be apropriate for generating css custom properties with tools like these:
+
+- [Tailwind CSS v4 variables to Figma](https://www.figma.com/community/plugin/1463378448591477945/tailwind-css-v4-variables-to-figma)
+
+- [Tailwind CSS v4 variables to Figma](https://www.figma.com/community/plugin/1463378448591477945/tailwind-css-v4-variables-to-figma)
+
+- [Layout - Tailwind CSS V4 Import & Expor](https://www.figma.com/community/plugin/1482322139658592700/layout-tailwind-css-v4-import-export)
+  
+outdated ones, it is for older tailwind versions before v4 but you can copy from them what you need
+
+- [Export Variables (CSS, SCSS, Tailwind)](https://www.figma.com/community/plugin/1382804904426179542/export-variables-css-scss-tailwind)
+
+- [variables2css](https://www.figma.com/community/plugin/1261234393153346915/variables2css)
 
