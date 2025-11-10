@@ -99,3 +99,15 @@ performance tip:
 Cool thing about this approach is if you have font that you want to use inside just one component, you can import it in that component and use it there (If you want to lazy load font this way, just for one component)
 
 ***
+
+# Class variance authority
+
+<https://cva.style/docs>
+
+## Hanadling styling conflicts with tailwind merge
+
+Workshop didn't use tailwind-merge
+
+<https://github.com/dcastil/tailwind-merge>
+
+I used it and combine it with `clsx` to build utility function that is offten used, and it preventing duplicate classes: `src/util/cn.ts`

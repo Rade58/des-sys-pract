@@ -70,7 +70,7 @@ export function SillyButton({
           [styles.secondary]: variant === "secondary",
           [styles.destructive]: variant === "destructive",
           //
-          // I like this more but
+          // I like this more
           // [styles.medium]: size === "medium",
           // [styles.small]: size === "small",
           // [styles.large]: size === "large",

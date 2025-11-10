@@ -2,7 +2,7 @@ import type { Preview } from "@storybook/react-vite";
 
 //
 import {
-  withThemeByClassName,
+  // withThemeByClassName,
   withThemeByDataAttribute,
 } from "@storybook/addon-themes";
 
