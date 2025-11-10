@@ -1,3 +1,5 @@
+@import "@fontsource-variable/plus-jakarta-sans";
+
 @import "tailwindcss";
 
 /* --color----- dark mode with class --color----- */
@@ -14,9 +16,16 @@ which people do in most of the cases */
 /* --color---------------------------------------------------- */
 
 @theme {
-  /* Colors */
+  /* fonts */
+  /* we don't want to add it */
+  /* --font-jakarta: "Plus Jakarta Sans Variable", sans-serif; */
+  /* we just want t o replace sans font we have */
+  --font-sans: "Plus Jakarta Sans Variable", sans-serif;
 
-  /* Mode 1 */
+  /* since I don't want default tailwind colors to be used */
+  --color-*: initial; /* Removes all default colors */
+  /*  */
+
   /* color */
   --color-black: #010209;
   --color-transparent: #01020900;

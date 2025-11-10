@@ -1,3 +1,6 @@
+// not using this because I generated it from figma
+// and pass them directly in @theme {} in src/style.css
+//
 export const colors = {
   primary: {
     "50": "#faf7fd",

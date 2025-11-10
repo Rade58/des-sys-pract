@@ -78,3 +78,24 @@ outdated ones, it is for older tailwind versions before v4 but you can copy from
 
 - [variables2css](https://www.figma.com/community/plugin/1261234393153346915/variables2css)
 
+# Variable font with Fontsource
+
+Cool because we can install it with npm
+
+<https://fontsource.org/>
+
+using `Plus Jakarta Sans`  font
+
+```bsh
+npm install @fontsource-variable/plus-jakarta-sans
+```
+
+I replaced this font for sans through global css
+
+***
+
+performance tip:
+
+Cool thing about this approach is if you have font that you want to use inside just one component, you can import it in that component and use it there (If you want to lazy load font this way, just for one component)
+
+***

@@ -14,9 +14,10 @@ function App() {
       </div>
 
       <div className="p-6">
-        <p className="bg-primary-600 text-secondary-400 p-8">
-          This is some themed paragraph
+        <p className="bg-primary-600 text-black p-8 border-2 border-accent-900">
+          This is some themed paragraph (default Tailwind colors arent allowed)
         </p>
+        <p className="text-4xl bolder text-secondary-900 p-4">I'm Rade</p>
       </div>
     </>
   );
