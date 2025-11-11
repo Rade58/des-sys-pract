@@ -1,5 +1,13 @@
 # Design Systems with Storybook - tryout
 
+Mostly based on project from [course](https://stevekinney.com/courses/storybook) by Steve Kinney, but I had to change a lot of things since course uses Tailwind bellow version 4
+
+I also added some things like biome for linting and formatting
+
+I also tried using tailwind-merge
+
+## Setup
+
 - [Storybook](https://storybook.js.org/docs/get-started/frameworks/react-vite?renderer=react) instatiated in existing [vite](https://vite.dev/guide/) react app
 
 ```bash
