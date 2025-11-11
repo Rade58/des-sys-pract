@@ -111,3 +111,18 @@ Workshop didn't use tailwind-merge
 <https://github.com/dcastil/tailwind-merge>
 
 I used it and combine it with `clsx` to build utility function that is offten used, and it preventing duplicate classes: `src/util/cn.ts`
+
+Had some problems in terms of storybook with types but I defined these classes to be use as prop types for the component:
+
+`src/components/silly_button_with_cva/variants.ts`
+```ts
+...
+// normaly you can use just this to type props
+export type SillyButtonVariants = VariantProps<typeof variants>;
+// but I needed to do this, and I need to type separate props 
+export type ButtonVariant = NonNullable<SillyButtonVariants["variant"]>;
+export type ButtonSize = NonNullable<SillyButtonVariants["size"]>;
+
+```
+
+And it worked (**But this was only Storybook problem, just for you to know**)
