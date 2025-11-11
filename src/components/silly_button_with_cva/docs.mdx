@@ -1,0 +1,51 @@
+import { Meta, Primary as FirstStory, Controls, Story, Title, Stories } from '@storybook/addon-docs/blocks';
+
+import { SillyButtonCva as Button } from "./SillyButtonCva";
+
+import * as SillyButtonMeta from "./SillyButtonCva.stories";
+
+<Meta of={SillyButtonMeta} />
+
+<Title>Button made with class variance authority</Title>
+
+I also use tailwind-merge and clsx
+
+## How to create this docs page
+
+See <a target="_blank" href="http://storybook.js.org/docs/writing-docs/doc-blocks">here</a>
+
+## Button
+
+This is our button
+
+<FirstStory />
+
+## Props
+
+<Controls />
+
+## Primary Button
+
+<Story of={SillyButtonMeta.Primary} />
+
+## Secondary Button
+
+<Story of={SillyButtonMeta.Secondary} />
+
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+## More
+
+<Button 
+  variant="primary"
+  size="small"
+>Upri u ovo dugme</Button>
+
+
+# All stories
+
+<Stories />

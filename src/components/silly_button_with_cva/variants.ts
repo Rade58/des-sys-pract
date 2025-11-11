@@ -77,5 +77,7 @@ export type SillyButtonVariants = VariantProps<typeof variants>;
 // if I use type above or if I try to Exclude<> null, because
 // null was problematic
 
-export type ButtonVariant = NonNullable<SillyButtonVariants["variant"]>;
-export type ButtonSize = NonNullable<SillyButtonVariants["size"]>;
+// ***** This also didn't work so I'm commenting it out
+
+// export type ButtonVariant = NonNullable<SillyButtonVariants["variant"]>;
+// export type ButtonSize = NonNullable<SillyButtonVariants["size"]>;

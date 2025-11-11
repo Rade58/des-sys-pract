@@ -112,25 +112,23 @@ Cool thing about this approach is if you have font that you want to use inside j
 
 <https://cva.style/docs>
 
+***
+I had **Storybook only** problems with types produced by cva since storybook generates controls from prop types.
+
+Well using just types from cva (Which is ideal way) isn't supported by storybook (see the example of `SillyButtonVariants` type used in `src/components/silly_button_with_cva/SillyButtonCva.tsx`) also type utilities like `Exclude<>` or `NonNullable<>` couldn't fix the problem so I enf up typing props by hand
+
+This is not ideal for me because
+
+**This problem isn't ideal for me because now besides just defining variants with cva, you need to make effort to more precisely type your props**
+
+This wasn't the problem in older versions of Storybook, so they maybe change way of using types because switching from `react-docgen-typescript` to `react-docgen`
+***
+
 ## Hanadling styling conflicts with tailwind merge
 
-Workshop didn't use tailwind-merge
+Workshop didn't use tailwind-merge but I wanted to try it
 
 <https://github.com/dcastil/tailwind-merge>
 
 I used it and combine it with `clsx` to build utility function that is offten used, and it preventing duplicate classes: `src/util/cn.ts`
 
-Had some problems in terms of storybook with types but I defined these classes to be use as prop types for the component:
-
-`src/components/silly_button_with_cva/variants.ts`
-```ts
-...
-// normaly you can use just this to type props
-export type SillyButtonVariants = VariantProps<typeof variants>;
-// but I needed to do this, and I need to type separate props 
-export type ButtonVariant = NonNullable<SillyButtonVariants["variant"]>;
-export type ButtonSize = NonNullable<SillyButtonVariants["size"]>;
-
-```
-
-And it worked (**But this was only Storybook problem, just for you to know**)

@@ -1,0 +1,11 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
+
+import { colors } from './tokens/colors'
+
+<Meta title="Colors" />
+
+## Color: `primary`
+
+<ColorPalette>
+{Object.entries(colors.primary).map(([k,v]) => (<ColorItem subtitle={k} key={k} colors={{[k]: v}} />))}
+</ColorPalette>

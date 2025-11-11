@@ -13,15 +13,14 @@ import {
   // type SillyButtonVariants,
   // I made these types because they work for storybook
   // since storybook generates controls based on prop types
-  type ButtonVariant,
-  type ButtonSize,
+  // ***** didn't work for storybook (not using it)
+  // type ButtonVariant,
+  // type ButtonSize,
 } from "./variants";
 
 //
 export type SillyButtonProps =
-  ComponentProps<"button"> & // // this is very helpful normaly
-  // but // ERROR: just Storybook
-  /* SillyButtonVariants &  */ {
+  ComponentProps<"button"> & /* SillyButtonVariants &  */ { // but // ERROR: just Storybook // // this is very helpful normaly
     // Same error here
     // I got error with this which meaans this Exclude isn't
     // supported in terms of Storybook also
@@ -35,15 +34,13 @@ export type SillyButtonProps =
     // so we hardcode this type
 
     // I don't want to write types like this
-    // variant?: "primary" | "secondary" | "destructive";
-    // size?: "small" | "medium" | "large";
+    variant?: "primary" | "secondary" | "destructive";
+    size?: "small" | "medium" | "large";
     className?: string;
 
-    // but at the end I defined types not with Exclude but with
-    // NonNulable typescript utility
-    // and it worked
-    variant?: ButtonVariant;
-    size?: ButtonSize;
+    // ***** didn't work for storybook
+    // variant?: ButtonVariant;
+    // size?: ButtonSize;
   };
 
 export function SillyButtonCva({
