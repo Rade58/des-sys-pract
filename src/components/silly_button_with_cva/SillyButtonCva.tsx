@@ -8,39 +8,20 @@ import { cn } from "../../util/cn";
 
 import {
   variants as sillyButtonVariants,
-  // so this was easier to use
-  // but only in Storybook it doesn't work
-  // type SillyButtonVariants,
-  // I made these types because they work for storybook
-  // since storybook generates controls based on prop types
-  // ***** didn't work for storybook (not using it)
-  // type ButtonVariant,
-  // type ButtonSize,
+  type SillyButtonVariants,
 } from "./variants";
 
-//
-export type SillyButtonProps =
-  ComponentProps<"button"> & /* SillyButtonVariants &  */ { // but // ERROR: just Storybook // // this is very helpful normaly
-    // Same error here
-    // I got error with this which meaans this Exclude isn't
-    // supported in terms of Storybook also
-    // I can use it but I wont
-    // also it is not descriptive enough
-    // variant?: Exclude<SillyButtonVariants["variant"], null | undefined>;
-    // variant?: "primary" | "secondary" | "destructive";
-    //
-    // again this didn't work Ias I expected
-    // size?: Exclude<SillyButtonVariants["size"], null | undefined>;
-    // so we hardcode this type
-
+// Important thing is that we are not using
+// Typscript generation fo controls in storybook
+// we typed them through argTypes (we provided options)
+export type SillyButtonProps = ComponentProps<"button"> &
+  SillyButtonVariants & {
     // I don't want to write types like this
-    variant?: "primary" | "secondary" | "destructive";
-    size?: "small" | "medium" | "large";
-    className?: string;
+    // we already defined this through cva
+    // variant?: "primary" | "secondary" | "destructive";
+    // size?: "small" | "medium" | "large";
 
-    // ***** didn't work for storybook
-    // variant?: ButtonVariant;
-    // size?: ButtonSize;
+    className?: string;
   };
 
 export function SillyButtonCva({

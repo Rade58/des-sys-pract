@@ -1,10 +1,12 @@
 # Design Systems with Storybook - tryout
 
-Mostly based on project from [course](https://stevekinney.com/courses/storybook) by Steve Kinney, but I had to change a lot of things since course uses Tailwind bellow version 4
+Mostly based on [this project](https://github.com/stevekinney/anthology/blob/main/src/components/badge/badge.stories.tsx) project from [course/workshop](https://stevekinney.com/courses/storybook) by Steve Kinney, but I had to change some things since course/workshop uses Tailwind bellow version 4
 
 I also added some things like biome for linting and formatting
 
-I also tried using tailwind-merge
+and tailwind-merge
+
+The rest is based on the workshop/course so I encurage you to buy it because it is really good
 
 ## Setup
 
@@ -108,9 +110,34 @@ Cool thing about this approach is if you have font that you want to use inside j
 
 ***
 
+
+***
+***
+
 # Class variance authority
 
 <https://cva.style/docs>
+
+Read this
+
+## You don't need to leave typing of args to the typescript
+
+You can set available options to `argTypes`, for example for select: 
+
+**This should be better choice, because if something happens likee it did with react-docgen they used, we should only relly on setting available options inside story and not rlaying on typescript based generation**
+
+```ts
+argTypes: {
+
+  variant: {
+    control: "select",
+    options: ["primary", "secondary", "destructive"],
+  },
+
+// ... 
+```
+
+See what happened to me because of that
 
 ***
 I had **Storybook only** problems with types produced by cva since storybook generates controls from prop types.
@@ -122,7 +149,9 @@ This is not ideal for me because
 **This problem isn't ideal for me because now besides just defining variants with cva, you need to make effort to more precisely type your props**
 
 This wasn't the problem in older versions of Storybook, so they maybe change way of using types because switching from `react-docgen-typescript` to `react-docgen`
-***
+
+**SO SOLUTION IS NOT TO RALLY ON TYPESCRIPT IN THIS CASE**
+**SET OPTIONS INSIDE `argTypes` INSIDE STORY `meta` OBJECT**
 
 ## Hanadling styling conflicts with tailwind merge
 
@@ -132,3 +161,8 @@ Workshop didn't use tailwind-merge but I wanted to try it
 
 I used it and combine it with `clsx` to build utility function that is offten used, and it preventing duplicate classes: `src/util/cn.ts`
 
+# Docs
+
+We did colors
+
+See how to document [icons](https://stevekinney.com/courses/storybook/icon-gallery) and [typogtraphy](https://stevekinney.com/courses/storybook/typeset)

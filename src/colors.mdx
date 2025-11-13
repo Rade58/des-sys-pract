@@ -1,11 +1,17 @@
-import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
+import { Meta, ColorPalette, ColorItem, } from '@storybook/addon-docs/blocks'
 
 import { colors } from './tokens/colors'
 
-<Meta title="Colors" />
+<Meta title="Tokens/Colors" />
 
-## Color: `primary`
+# There is more you can do here besides displaying palette
+
+There are also Components you can use to display typography and icons:
+  `IconGalery` and `Typeset`
+
+# Here are Colors
+
 
 <ColorPalette>
-{Object.entries(colors.primary).map(([k,v]) => (<ColorItem subtitle={k} key={k} colors={{[k]: v}} />))}
+{Object.entries(colors).map(([k,v]) => (<ColorItem subtitle={k} key={k} colors={v} />))}
 </ColorPalette>

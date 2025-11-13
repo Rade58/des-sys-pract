@@ -4,8 +4,8 @@ import { fn } from "storybook/test";
 
 import { SillyButtonCva } from "./SillyButtonCva";
 
-const meta: Meta = {
-  title: "Radedev/Button With CVA (class variant authority)",
+const meta = {
+  title: "Radedev/Components/Button With CVA (class variant authority)",
   component: SillyButtonCva,
 
   args: {
@@ -23,6 +23,11 @@ const meta: Meta = {
     //
     variant: {
       control: "select",
+      options: ["primary", "secondary", "destructive"],
+    },
+    size: {
+      control: "radio",
+      options: ["medium", "small", "large"],
     },
   },
 } satisfies Meta<typeof SillyButtonCva>;

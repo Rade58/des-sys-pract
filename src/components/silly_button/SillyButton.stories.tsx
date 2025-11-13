@@ -4,8 +4,8 @@ import { fn } from "storybook/test";
 
 import { SillyButton } from "./SillyButton";
 
-const meta: Meta = {
-  title: "Radedev/Silly Button",
+const meta = {
+  title: "Radedev/Components/Silly Button",
   component: SillyButton,
   //
   args: {
@@ -27,11 +27,24 @@ const meta: Meta = {
     // now it will be dropdown
     variant: {
       control: "select",
+      options: ["primary", "secondary", "destructive"],
     },
     //
     /* size: {
       control: "radio",
     }, */
+    // this would be more fine grained approach of doing
+    // prop types
+    children: {
+      name: "lable",
+      control: "text",
+      description: "Text to be displayed on the button",
+      // if you do this it will be disabled from displaying
+      // in documentation (blocks we used in mdx files)
+      table: {
+        disable: true,
+      },
+    },
   },
 } satisfies Meta<typeof SillyButton>;
 

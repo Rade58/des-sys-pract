@@ -4,6 +4,11 @@
 // but these are useful to be displayed in docs
 // so good idea is to generate the besides css custom properties
 // because we will use them in mdx
+
+// ALSO MAYBE IT IS BETTER TO CREATE JSON FILE
+// FOR THESE COLORS AND WE CAN ALSO IMPORT JSON AND USE IT INSIDE
+// src/colors.mdx
+
 export const colors = {
   primary: {
     "50": "#faf7fd",
@@ -115,17 +120,3 @@ export const white = "#ffffff";
 export const black = "#010209";
 export const transparent = "transparent";
 export const currentColor = "currentColor";
-
-const primary = {
-  "50": "#faf7fd",
-  "100": "#f2ecfb",
-  "200": "#e7ddf7",
-  "300": "#d5c2f0",
-  "400": "#bc9be5",
-  "500": "#9967d5",
-  "600": "#8a55c8",
-  "700": "#7642ae",
-  "800": "#643a8f",
-  "900": "#523073",
-  "950": "#361952",
-};

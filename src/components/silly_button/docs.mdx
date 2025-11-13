@@ -1,0 +1,50 @@
+import { Meta, Primary as FirstStory, Controls, Story, Title, Stories } from '@storybook/addon-docs/blocks';
+
+import { SillyButton as Button } from "./SillyButton";
+
+import * as SillyButtonMeta from "./SillyButton.stories";
+
+<Meta of={SillyButtonMeta} />
+
+<Title>Button</Title>
+
+
+## How to create this docs page
+
+See <a target="_blank" href="http://storybook.js.org/docs/writing-docs/doc-blocks">here</a>
+
+## Button
+
+This is our button
+
+<FirstStory />
+
+## Props
+
+<Controls />
+
+## Primary Button
+
+<Story of={SillyButtonMeta.Primary} />
+
+## Secondary Button
+
+<Story of={SillyButtonMeta.Secondary} />
+
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+## More
+
+<Button 
+  variant="primary"
+  size="small"
+>Upri u ovo dugme</Button>
+
+
+# All stories
+
+<Stories />
