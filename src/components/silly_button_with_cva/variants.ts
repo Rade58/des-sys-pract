@@ -71,13 +71,3 @@ export const variants = cva(
 );
 
 export type SillyButtonVariants = VariantProps<typeof variants>;
-
-// There is a problem because Storybook generates their
-// controls by reading types of the props and error happens
-// if I use type above or if I try to Exclude<> null, because
-// null was problematic
-
-// ***** This also didn't work so I'm commenting it out
-
-// export type ButtonVariant = NonNullable<SillyButtonVariants["variant"]>;
-// export type ButtonSize = NonNullable<SillyButtonVariants["size"]>;

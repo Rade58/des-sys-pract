@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Callout } from "./Callout";
 
+import { calloutVariantOptions } from "./callout-variant";
+
 const meta = {
   title: "AfterHourDev/Callout",
   component: Callout,
@@ -12,7 +14,10 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "information", "success", "danger", "warning"],
+      // instead of hardcoding
+      // options: ["primary", "information", "success", "danger", "warning"],
+      // better to use it like this
+      options: calloutVariantOptions,
     },
   },
 } satisfies Meta<typeof Callout>;

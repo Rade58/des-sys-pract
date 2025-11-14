@@ -110,8 +110,6 @@ Cool thing about this approach is if you have font that you want to use inside j
 
 ***
 
-
-***
 ***
 
 # Class variance authority
@@ -120,7 +118,7 @@ Cool thing about this approach is if you have font that you want to use inside j
 
 Read this
 
-## You don't need to leave typing of args to the typescript
+## You don't need to leave typing of args to the typescript like i originaly thought
 
 You can set available options to `argTypes`, for example for select: 
 
@@ -153,16 +151,48 @@ This wasn't the problem in older versions of Storybook, so they maybe change way
 **SO SOLUTION IS NOT TO RALLY ON TYPESCRIPT IN THIS CASE**
 **SET OPTIONS INSIDE `argTypes` INSIDE STORY `meta` OBJECT**
 
-## Hanadling styling conflicts with tailwind merge
+## But there is better solution and it is kepping possible variant values inside array
 
-Workshop didn't use tailwind-merge but I wanted to try it
+In file where you use class authority variance, just keep individual variants in variables and assign them to `variants` object (this object: `const variants = vca(...`)
+
+And then make an array from specific variant values
+
+```ts
+export const variants = Object.keys(size)
+```
+
+You then use this array above, to define options for select elemnt for example
+
+See how I did it inside: `src/components/callout/callout-variant.ts`
+
+Or even better is to start with the object of the variant options you can reference it
+
+## Hanadling styling conflicts with tailwind merge
 
 <https://github.com/dcastil/tailwind-merge>
 
 I used it and combine it with `clsx` to build utility function that is offten used, and it preventing duplicate classes: `src/util/cn.ts`
+
+But also you can use it instead clsx, like here: `src/components/text-area/TextArea.tsx`
 
 # Docs
 
 We did colors
 
 See how to document [icons](https://stevekinney.com/courses/storybook/icon-gallery) and [typogtraphy](https://stevekinney.com/courses/storybook/typeset)
+
+
+# UI test
+
+Not going to use `@storybook/test-runner` like in workshop since it is suggested to use `@storybook/addon-vitest`.
+
+Make sure to specify it in main.ts
+
+I added two new scripts
+
+```json
+"test": "vitest",
+"test:ui": "vitest --ui"
+```
+
+vitest and playwright are already set in vite config
