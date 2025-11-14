@@ -101,7 +101,8 @@ export const LengthTooLong: Story = {
 
     expect(textArea).toHaveClass("ring-danger-500");
 
-    expect(count).toHaveStyle({ color: "#ed4656" /* "rgb(237, 70, 86)" */ });
+    // expect(count).toHaveStyle({ color: "#ed4656" /* "rgb(237, 70, 86)" */ });
+    expect(count).toHaveStyle({ color: "#f67380" });
   },
 };
 

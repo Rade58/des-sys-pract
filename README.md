@@ -200,3 +200,23 @@ vitest and playwright are already set in vite config
 # Visual tests
 
 <https://www.chromatic.com/>
+
+# Using decorators
+
+See here how we used dcoraters to use context: `src/components/task-list/task-list.stories.tsx`
+
+We also use decorators when we were dealing with theme. We used `withThemeByDataAttribute`
+
+# Loaders
+
+We are not talking here about spinner or similar, we are talking about situation where your component makes api call
+
+see here: <https://storybook.js.org/docs/writing-stories/loaders>
+
+we used it here: `src/components/task-list/task-list.stories.tsx`
+
+## Mock service workser
+
+Look into this: <https://mswjs.io/>
+
+Intercepting network request to give you back mock data
