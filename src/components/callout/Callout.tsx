@@ -27,7 +27,7 @@ export function Callout({
         variant,
       })}
     >
-      <h2 className="font-semibold">{title}</h2>
+      <h2 className="font-semibold text-2xl">{title}</h2>
       {/* in real worls example here you would pass more than text,
       so markup shuld be here */}
       <p>{children}</p>

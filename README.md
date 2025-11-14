@@ -196,3 +196,7 @@ I added two new scripts
 ```
 
 vitest and playwright are already set in vite config
+
+# Visual tests
+
+<https://www.chromatic.com/>
